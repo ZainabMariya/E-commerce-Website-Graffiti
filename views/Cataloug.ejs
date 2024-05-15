@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Products</title>
+    <link rel="stylesheet" href="/public/css/styleCatalouge.css">
+   <div id="logo">
+   <centre> <img src="logo-no-background.png" alt="graffiti logo" width="200" height="150"></centre>
+
+  </div>
+  <nav>
+    <a href="SW.ejs">Home</a>
+      <a href="search.ejs">Search</a>
+        <a href="contactus.ejs">Contact Us</a>
+      </nav>
+</head>
+<body>
+    <h1>Products</h1>
+    <div class="catalog">
+        <% Article.forEach(Article => { %>
+            <div class="product">
+                <img src="/assets/immigrant_song.jpg" alt="<%= Article.name %>">
+                <h2><%= Article.name %></h2>
+                <h3><%= Article.color %></h3>
+                <p class="price">$<%= Article.price %></p>
+            </div>
+        <% }); %>
+    </div>
+</body>
+</html>

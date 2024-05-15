@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+    <meta charset="UTF-8">
+    <title>Search our Catalogue</title>
+    <link rel="stylesheet" href="/public/css/search.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Search our Catalogue!</h1>
+        <form id="search-form">
+            <label for="search-input">Search: </label>
+            <input type="text" id="search-input" placeholder="Enter a search term">
+            <button type="button" onclick= "searchArticles()">Search</button>
+        </form>
+        <table id="result-table">
+            <thead>
+                <tr>
+                    <th>Item Name</th>
+                    <th>Color</th>
+                    <th>Price</th>
+                </tr>
+            </thead>
+            <tbody id="result-body">
+                <% data.forEach(article => { %>
+                    <tr>
+                        <td><%= article.name %></td>
+                        <td><%= article.color %></td>
+                        <td><%= article.price %></td>
+                    </tr>
+                <% }); %>
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        async function searchArticles() {
+            const searchTerm = document.getElementById('search-input').value;
+            const response = await fetch(`/api/articles/search/${searchTerm}`);
+            const data = await response.json();
+
+            const resultBody = document.getElementById('result-body');
+            resultBody.innerHTML = '';
+
+            data.forEach(article => {
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td>${article.name}</td>
+                    <td>${article.color}</td>
+                    <td>${article.price}</td>
+                `;
+                resultBody.appendChild(row);
+            });
+        }
+    </script>
+</body>
+</html>

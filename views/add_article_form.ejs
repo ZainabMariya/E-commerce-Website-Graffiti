@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sell Your Clothing Item</title>
+  <link rel="stylesheet" href="/public/css/addNew.css">
+
+  
+</head>
+<body>
+  <h1>Sell Your Clothing Item</h1>
+
+  <form method="POST" action="/v1/articles">
+    <!-- Name Input -->
+    <label for="name">Clothing Item Name:</label>
+    <input type="text" id="name" name="name" required>
+    <br>
+
+    <!-- Color Input -->
+    <label for="color">Color:</label>
+    <input type="text" id="color" name="color" required>
+    <br>
+
+    <!-- Price Input -->
+    <label for="price">Price:</label>
+    <input type="text" id="price" name="price" required>
+    <br>
+
+    <!-- Submit Button -->
+    <button type="submit">Sell Item</button>
+  </form>
+</body>
+</html>
