@@ -1,0 +1,70 @@
+:root{
+    background-image: linear-gradient(to right, black,  rgb(163, 4, 134));}
+    nav {
+        overflow: hidden;
+        text-align: center;
+        background-color: green;
+        letter-spacing: 3;
+        padding-inline: 20px;
+        object-fit: fill;
+    
+      }
+      
+      nav a {
+        float: left;
+        display: block;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-family: 'Impact', fantasy;
+      }
+      button:hover{
+        background-color: rgb(162, 244, 146);
+        text-decoration-color: white;
+        
+      
+      }
+      nav a:hover {
+        background-color: #ddd;
+        color: black;
+      }    
+body {
+    text-align: center;
+    font-family: 'Impact', fantasy;
+    font-weight: lighter;
+    color: #ddd;
+}
+.container {
+    text-align: center;
+    width: 90%;
+    margin: 0 auto;
+    padding: 20px;
+}
+#search-form {
+    margin-bottom: 20px;
+}
+table {
+    
+    background-color: deeppink;
+    width:max-content;
+    text-align: center;
+    width:90%;
+    border-collapse: collapse;
+}
+table, th, td {
+    text-align: center;
+    width:  90%;
+    border: 1px solid green;
+    align-content: center;
+}
+
+th, td {
+    text-align: centre;
+    align-items: center;
+    padding: 8px;
+    text-align: left;
+}
+th {
+    background-color: black;
+}
